@@ -1,0 +1,59 @@
+{
+  "name": "parcel-react-starter",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Sébastien Castiel <sebastien@castiel.me>",
+  "license": "MIT",
+  "scripts": {
+    "start": "parcel public/index.html"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.js": [
+      "prettier --write",
+      "git add",
+      "eslint --max-warnings 0"
+    ]
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.7.0",
+    "eslint-plugin-react": "^7.11.1",
+    "husky": "^1.1.2",
+    "lint-staged": "^8.1.4",
+    "parcel-bundler": "^1.11.0",
+    "prettier": "^1.14.3"
+  },
+  "dependencies": {
+    "react": "^16.8.x",
+    "react-dom": "^16.8.x"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "proseWrap": "never"
+  },
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "extends": [
+      "eslint:recommended",
+      "plugin:react/recommended"
+    ],
+    "rules": {
+      "react/display-name": 0,
+      "react/prop-types": 0
+    },
+    "env": {
+      "browser": true
+    },
+    "settings": {
+      "react": {
+        "version": "16.0"
+      }
+    }
+  }
+}
