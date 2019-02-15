@@ -29,6 +29,7 @@
     "prettier": "^1.14.3"
   },
   "dependencies": {
+    "babel-polyfill": "^6.26.0",
     "react": "^16.8.x",
     "react-dom": "^16.8.x"
   },
